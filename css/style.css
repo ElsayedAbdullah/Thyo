@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* Colors */
 /* Media Queries */
 /* Fonts */
@@ -66,6 +65,7 @@ p {
 .img-responsive {
   display: block;
   max-width: 100%;
+  margin: auto;
 }
 
 .bg-white {
@@ -99,7 +99,7 @@ p {
   padding-top: 12px;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 915px) {
   .content {
     border-radius: 0;
     border: 0;
@@ -120,7 +120,7 @@ p {
   --s-stepper-bullet: 2rem;
   --s-stepper-bullet-half: calc(var(--s-stepper-bullet) / 2);
   --step-transition: background 0.5s, color 0.5s;
-  --step-content: "✔︎";
+  --step-content: url("../imgs/check_icon.svg");
   --step-color: #aea9a8;
   --step-bar-bg: var(--c-accent);
   --step-bullet-bg: var(--step-bar-bg);
@@ -295,6 +295,13 @@ p {
   }
 }
 
+@media (max-width: 445px) {
+  .notice_box .two {
+    max-width: 280px;
+    margin: auto;
+  }
+}
+
 .main_heading {
   text-align: center;
   margin: 30px auto 0;
@@ -377,7 +384,7 @@ p {
   padding: 0 32px 24px;
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 915px) {
   .limited_time_offer {
     margin: 30px 50px;
   }
@@ -560,7 +567,7 @@ p {
   margin-right: 24px;
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 915px) {
   .limited_time_offer .price_per_bottle img {
     margin-right: 10px;
     width: 70px;
@@ -590,7 +597,7 @@ p {
   margin-right: 6px;
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 915px) {
   .limited_time_offer .price h2 {
     font-size: 65px;
   }
@@ -610,7 +617,7 @@ p {
   text-align: left;
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 915px) {
   .limited_time_offer .price h3 {
     font-size: 25px;
     line-height: 25px;
@@ -687,7 +694,7 @@ p {
   border: 0;
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 915px) {
   .limited_time_offer .add_to_cart {
     font-size: 24px;
     padding: 15px 0 12px;
@@ -792,7 +799,7 @@ p {
   padding: 0 10px;
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 915px) {
   .moneyBack_guarantee p {
     font-size: 17px;
   }
@@ -834,7 +841,7 @@ p {
   z-index: 2;
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 915px) {
   .moneyBack_guarantee .money_back_offer {
     font-size: 40px;
     max-width: 585px;
@@ -907,7 +914,7 @@ p {
   color: #f5f4f4;
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 915px) {
   .moneyBack_guarantee .guarantee_title {
     font-size: 110px;
   }
@@ -933,7 +940,7 @@ p {
   display: block;
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 915px) {
   .refuse_offer a {
     padding: 40px 0;
   }
@@ -947,13 +954,13 @@ p {
   }
 }
 
-@media (max-width: 991px) {
+@media (max-width: 915px) {
   footer {
     background-color: #fff;
   }
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 915px) {
   footer {
     padding: 0 30px;
   }
@@ -1005,7 +1012,7 @@ footer .footer_links {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    padding: 0 20px;
+    padding: 0 50px;
     margin-top: 10px;
   }
 }
@@ -1041,8 +1048,10 @@ footer .footer_links li:not(:last-child):after {
   background-color: #ccc9c8;
 }
 
-footer .footer_links li:nth-child(3)::after {
-  display: none;
+@media (max-width: 445px) {
+  footer .footer_links li:nth-child(3)::after {
+    display: none;
+  }
 }
 
 footer .footer_links li a {

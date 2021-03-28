@@ -6,8 +6,8 @@ $greenColor: #02643e;
 
 /* Media Queries */
 $mobile: "(max-width: 767px)";
-$tablet: "(min-width: 768px) and (max-width: 991px)";
-$maxTab: "(max-width: 991px)";
+$tablet: "(min-width: 768px) and (max-width: 915px)";
+$maxTab: "(max-width: 915px)";
 $betweentabdesk: "(min-width: 1000px) and (max-width: 1200px)";
 
 /* Fonts */
@@ -76,6 +76,7 @@ p {
 .img-responsive {
   display: block;
   max-width: 100%;
+  margin: auto;
 }
 
 .bg-white {
@@ -126,7 +127,7 @@ p {
   --step-transition: background 0.5s, color 0.5s;
 
   // all colors are define for the active state
-  --step-content: "✔︎";
+  --step-content: url("../imgs/check_icon.svg");
   --step-color: #aea9a8;
   --step-bar-bg: var(--c-accent);
   --step-bullet-bg: var(--step-bar-bg);
@@ -266,6 +267,10 @@ p {
     color: #827b79;
     @media #{$mobile} {
       font-size: 14px;
+    }
+    @media (max-width: 445px) {
+      max-width: 280px;
+      margin: auto;
     }
   }
 }
@@ -771,7 +776,7 @@ footer {
     flex-wrap: wrap;
     @media #{$mobile} {
       justify-content: center;
-      padding: 0 20px;
+      padding: 0 50px;
       margin-top: 10px;
     }
     li {
@@ -799,8 +804,10 @@ footer {
         }
       }
       &:nth-child(3) {
-        &::after {
-          display: none;
+        @media (max-width: 445px){
+          &::after {
+            display: none;
+          }
         }
       }
       a {
