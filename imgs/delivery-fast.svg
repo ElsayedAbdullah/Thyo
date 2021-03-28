@@ -1,16 +1,1 @@
-<svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0)">
-<path d="M26.375 26H31.375V18L27.375 16L24.375 8H15.375V26H18.375" stroke="#5D514D" stroke-width="2" stroke-miterlimit="10"/>
-<path d="M22.375 30C24.5841 30 26.375 28.2091 26.375 26C26.375 23.7909 24.5841 22 22.375 22C20.1659 22 18.375 23.7909 18.375 26C18.375 28.2091 20.1659 30 22.375 30Z" stroke="#5D514D" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/>
-<path d="M19.375 12V16H23.375" stroke="#5D514D" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/>
-<path d="M11.375 8H3.375" stroke="#5D514D" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/>
-<path d="M1.375 3H15.375V8" stroke="#5D514D" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/>
-<path d="M11.375 13H5.375" stroke="#5D514D" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/>
-<path d="M11.375 18H7.375" stroke="#5D514D" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/>
-</g>
-<defs>
-<clipPath id="clip0">
-<rect width="32" height="32" fill="white" transform="translate(0.375)"/>
-</clipPath>
-</defs>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="33" height="32" fill="none"  xmlns:v="https://vecta.io/nano"><g clip-path="url(#A)" stroke="#5d514d" stroke-width="2" stroke-miterlimit="10"><path d="M26.375 26h5v-8l-4-2-3-8h-9v18h3"/><path d="M22.375 30a4 4 0 1 0 0-8 4 4 0 1 0 0 8z"/><g stroke-linecap="square"><path d="M19.375 12v4h4m-12-8h-8m-2-5h14v5m-4 5h-6m6 5h-4"/></g></g><defs><clipPath id="A"><path fill="#fff" transform="translate(.375)" d="M0 0h32v32H0z"/></clipPath></defs></svg>
