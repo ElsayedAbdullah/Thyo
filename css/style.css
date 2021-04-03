@@ -88,9 +88,14 @@ p {
 }
 
 .wrapper {
-  max-width: 916px;
+  max-width: 1200px;
   margin: auto;
   overflow: hidden;
+}
+
+.wrapper .container {
+  max-width: 916px;
+  margin: auto;
 }
 
 .content {
@@ -98,6 +103,21 @@ p {
   border: 1px solid #f0efef;
   border-radius: 12px;
   padding-top: 12px;
+  position: relative;
+}
+
+.content:after {
+  content: "";
+  position: absolute;
+  top: 40px;
+  left: 50px;
+  bottom: 0;
+  right: 50px;
+  z-index: -1;
+  background: rgba(93, 81, 77, 0.2);
+  -webkit-filter: blur(180px);
+          filter: blur(180px);
+  border-radius: 12px;
 }
 
 @media (max-width: 915px) {
@@ -263,6 +283,12 @@ p {
   margin: 0 15px;
 }
 
+@media (max-width: 425px) {
+  .notice_box h3 span.mx-165 {
+    max-width: 165px;
+  }
+}
+
 @media (max-width: 767px) {
   .notice_box h3 span {
     font-size: 18px;
@@ -278,10 +304,16 @@ p {
   margin: 7px 0 3px;
 }
 
+@media (max-width: 425px) {
+  .notice_box .one {
+    max-width: 260px;
+  }
+}
+
 @media (max-width: 767px) {
   .notice_box .one {
     font-size: 14px;
-    margin: 10px 0 6px;
+    margin: 10px auto 6px;
   }
 }
 
@@ -297,9 +329,9 @@ p {
   }
 }
 
-@media (max-width: 445px) {
+@media (max-width: 425px) {
   .notice_box .two {
-    max-width: 280px;
+    max-width: 230px;
     margin: auto;
   }
 }
@@ -313,10 +345,15 @@ p {
 .main_heading h2 {
   font-size: 41px;
   line-height: 44px;
-  background: #02643e;
-  color: #f5f4f4;
   display: inline-block;
-  padding: 6px 12px 0;
+  max-width: 780px;
+}
+
+.main_heading h2 mark {
+  background-color: #02643e;
+  color: #f5f4f4;
+  line-height: 64px;
+  padding: 6px 10px;
 }
 
 @media (max-width: 767px) {
@@ -324,8 +361,25 @@ p {
     font-size: 26px;
     line-height: 34px;
     margin: 0 0 10px;
-    padding: 6px 10px 0;
   }
+  .main_heading h2 mark {
+    line-height: 45px;
+  }
+}
+
+.main_heading.upsell-heading {
+  margin: 25px auto 0;
+  padding: 0 10px;
+}
+
+@media (min-width: 768px) and (max-width: 915px) {
+  .main_heading.upsell-heading {
+    padding: 0 20px;
+  }
+}
+
+.main_heading.upsell-heading h2 {
+  margin-bottom: 0;
 }
 
 .main_heading h1 {
@@ -403,7 +457,7 @@ p {
 .limited_time_offer .offer_61 {
   color: #f5f4f4;
   background: #e4181a;
-  width: 350px;
+  width: 390px;
   margin: auto;
   position: relative;
   top: -30px;
@@ -411,8 +465,14 @@ p {
 
 @media (max-width: 470px) {
   .limited_time_offer .offer_61 {
-    width: 82%;
-    top: -40px;
+    width: 84%;
+    top: -38px;
+  }
+}
+
+@media (max-width: 360px) {
+  .limited_time_offer .offer_61 {
+    width: 96%;
   }
 }
 
@@ -423,7 +483,7 @@ p {
 
 @media (max-width: 767px) {
   .limited_time_offer .offer_61 .offer_content {
-    padding: 6px 0 10px;
+    padding: 8px 0 10px;
   }
 }
 
@@ -490,11 +550,13 @@ p {
 @media (max-width: 767px) {
   .limited_time_offer .offer_61 h3 {
     font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 5px;
   }
 }
 
 .limited_time_offer .offer_61 p {
-  font-weight: 600;
+  font-weight: 500;
   font-size: 16px;
   line-height: 22px;
   margin-top: -6px;
@@ -684,16 +746,20 @@ p {
   font-family: "Konnect";
   font-weight: bold;
   font-size: 32px;
-  line-height: 42px;
   text-align: center;
-  text-transform: uppercase;
   color: #f5f4f4;
-  text-shadow: 1px 2px 0px rgba(0, 0, 0, 0.17);
-  background: #ff6005;
   border-radius: 8px;
-  padding: 20px 0;
-  width: 100%;
-  border: 0;
+  padding: 21px 0 18px;
+  background: #ff6005;
+  text-transform: uppercase;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  text-shadow: 1px 2px 0px rgba(0, 0, 0, 0.17);
+}
+
+.limited_time_offer .add_to_cart:hover {
+  background: #FF8037;
 }
 
 @media (min-width: 768px) and (max-width: 915px) {
@@ -937,20 +1003,20 @@ p {
   font-size: 24px;
   line-height: 33px;
   text-decoration: underline;
-  padding: 40px 0 65px;
+  padding: 40px 65px 65px;
   color: #179bd7;
   display: block;
 }
 
 @media (min-width: 768px) and (max-width: 915px) {
   .refuse_offer a {
-    padding: 40px 0;
+    padding: 40px 20px;
   }
 }
 
 @media (max-width: 767px) {
   .refuse_offer a {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 25px;
     padding: 20px 20px 0;
   }
@@ -1014,7 +1080,7 @@ footer .footer_links {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    padding: 0 50px;
+    padding: 0 20px;
     margin-top: 10px;
   }
 }
@@ -1075,5 +1141,58 @@ footer .copyright p {
   footer .copyright p {
     padding: 16px 45px;
   }
+}
+
+.free-video {
+  background: center/cover no-repeat url(../imgs/upsell/video-bg.png);
+  position: relative;
+  margin: 30px auto 52px;
+  border-radius: 17px;
+  max-width: 760px;
+  overflow: hidden;
+  padding-bottom: 48.25%;
+  padding-top: 25px;
+  height: 0;
+}
+
+@media (min-width: 768px) and (max-width: 915px) {
+  .free-video {
+    width: calc(100% - 100px);
+    margin: 20px auto 65px;
+  }
+}
+
+@media (max-width: 767px) {
+  .free-video {
+    width: calc(100% - 20px);
+    margin: 20px 10px 65px;
+  }
+}
+
+.free-video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.free-video img.video-info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  max-width: 85%;
+  max-height: 85%;
+}
+
+.free-video a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
 }
 /*# sourceMappingURL=style.css.map */

@@ -97,9 +97,13 @@ p {
 }
 
 .wrapper {
-  max-width: 916px;
+  max-width: 1200px;
   margin: auto;
   overflow: hidden;
+  .container {
+    max-width: 916px;
+  margin: auto;
+  }
 }
 
 .content {
@@ -107,6 +111,19 @@ p {
   border: 1px solid #f0efef;
   border-radius: 12px;
   padding-top: 12px;
+  position: relative;
+  &:after {
+    content: "";
+    position: absolute;
+    top: 40px;
+    left: 50px;
+    bottom: 0;
+    right: 50px;
+    z-index: -1;
+    background: rgba(#5D514D, 0.2);
+    filter: blur(180px);
+    border-radius: 12px;
+  }
 
   @media #{$maxTab} {
     border-radius: 0;
@@ -246,6 +263,11 @@ p {
       line-height: 31px;
       color: $textColor;
       margin: 0 15px;
+      &.mx-165 {
+        @media (max-width: 425px) {
+          max-width: 165px;
+        }
+      }
       @media #{$mobile} {
         font-size: 18px;
         line-height: 23px;
@@ -258,9 +280,12 @@ p {
     line-height: 22px;
     color: #3f352f;
     margin: 7px 0 3px;
+    @media (max-width: 425px) {
+      max-width: 260px;
+    }
     @media #{$mobile} {
       font-size: 14px;
-      margin: 10px 0 6px;
+      margin: 10px auto 6px;
     }
   }
   .two {
@@ -270,8 +295,8 @@ p {
     @media #{$mobile} {
       font-size: 14px;
     }
-    @media (max-width: 445px) {
-      max-width: 280px;
+    @media (max-width: 425px) {
+      max-width: 230px;
       margin: auto;
     }
   }
@@ -282,18 +307,36 @@ p {
   text-align: center;
   margin: 30px auto 0;
   padding: 0 29px;
+  
   h2 {
     font-size: 41px;
     line-height: 44px;
-    background: $greenColor;
-    color: #f5f4f4;
     display: inline-block;
-    padding: 6px 12px 0;
+    max-width: 780px;
+    
+    mark {
+    background-color: #02643e;
+    color: #f5f4f4;
+    line-height: 64px;
+    padding: 6px 10px;
+    }
     @media #{$mobile} {
       font-size: 26px;
       line-height: 34px;
       margin: 0 0 10px;
-      padding: 6px 10px 0;
+      mark {
+        line-height: 45px;
+      }
+    }
+  }
+  &.upsell-heading {
+    margin: 25px auto 0;
+    padding: 0 10px;
+    @media #{$tablet} {
+      padding: 0 20px;
+    }
+    h2 {
+      margin-bottom: 0;
     }
   }
   h1 {
@@ -353,19 +396,23 @@ p {
   .offer_61 {
     color: #f5f4f4;
     background: #e4181a;
-    width: 350px;
+    width: 390px;
     margin: auto;
     position: relative;
     top: -30px;
     @media (max-width: 470px) {
-      width: 82%;
-      top: -40px;
+      width: 84%;
+      top: -38px;
     }
+    @media (max-width: 360px) {
+      width: 96%;
+    }
+    
     .offer_content {
       padding: 6px 0 5px;
       position: relative;
       @media #{$mobile} {
-        padding: 6px 0 10px;
+        padding: 8px 0 10px;
       }
     }
 
@@ -414,10 +461,12 @@ p {
       line-height: 33px;
       @media #{$mobile} {
         font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 5px;
       }
     }
     p {
-      font-weight: 600;
+      font-weight: 500;
       font-size: 16px;
       line-height: 22px;
       margin-top: -6px;
@@ -549,16 +598,18 @@ p {
     font-family: "Konnect";
     font-weight: bold;
     font-size: 32px;
-    line-height: 42px;
     text-align: center;
-    text-transform: uppercase;
     color: #f5f4f4;
-    text-shadow: 1px 2px 0px rgba(0, 0, 0, 0.17);
-    background: #ff6005;
     border-radius: 8px;
-    padding: 20px 0;
-    width: 100%;
-    border: 0;
+    padding: 21px 0 18px;
+    background: #ff6005;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    text-shadow: 1px 2px 0px rgba(0, 0, 0, 0.17);
+    &:hover {
+      background: #FF8037;
+    }
     @media #{$tablet} {
       font-size: 24px;
       padding: 15px 0 12px;
@@ -731,14 +782,14 @@ p {
     font-size: 24px;
     line-height: 33px;
     text-decoration: underline;
-    padding: 40px 0 65px;
+    padding: 40px 65px 65px;
     color: #179bd7;
     display: block;
     @media #{$tablet} {
-      padding: 40px 0;
+      padding: 40px 20px;
     }
     @media #{$mobile} {
-      font-size: 18px;
+      font-size: 16px;
       line-height: 25px;
       padding: 20px 20px 0;
     }
@@ -778,7 +829,7 @@ footer {
     flex-wrap: wrap;
     @media #{$mobile} {
       justify-content: center;
-      padding: 0 50px;
+      padding: 0 20px;
       margin-top: 10px;
     }
     li {
@@ -831,5 +882,49 @@ footer {
         padding: 16px 45px;
       }
     }
+  }
+}
+
+// upsell page
+.free-video {
+  background: center / cover no-repeat url(../imgs/upsell/video-bg.png);
+  position: relative;
+  margin: 30px auto 52px;
+  border-radius: 17px;
+  max-width: 760px;
+  overflow: hidden;
+  padding-bottom: 48.25%;
+  padding-top: 25px;
+  height: 0;
+  @media #{$tablet} {
+    width: calc(100% - 100px);
+    margin: 20px auto 65px;
+  }
+  @media #{$mobile} {
+    width: calc(100% - 20px);
+    margin: 20px 10px 65px;
+  }
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  img.video-info{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    max-width: 85%;
+    max-height: 85%;
+  }
+  a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
   }
 }

@@ -9,7 +9,9 @@
     <link rel="preload" href="fonts/Konnect-Bold.woff" as="font" crossorigin="anonymous" />
     <link rel="preload" href="fonts/Konnect-SemiBold.woff" as="font" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
     <link rel="stylesheet" href="css/style.css" />
+
     <!-- Lazysizes -->
     <script async src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.0/lazysizes.min.js"></script>
   </head>
@@ -40,42 +42,39 @@
         <div class="notice_box">
           <h3>
             <img src="imgs/warning-icon.svg" alt="warning-icon" />
-            <span>Do Not Close This Page</span>
+            <span class="mx-165">Wait! Your Order Is Not Complete!</span>
             <img src="imgs/warning-icon.svg" alt="warning-icon" />
           </h3>
-          <p class="one">Your Order May Not Yet Be Complete!</p>
+          <p class="one">Do Not Click The Back Button Or It May Cause Multiple Charges To Your Card</p>
           <p class="two">(Please Read The Message Below To Finalize Your Order)</p>
         </div>
 
         <!-- Main Heading -->
-        <div class="main_heading">
-          <h2>6 Bottles Too Much?</h2>
-          <h1>Secure the Same <span>61% Discount</span> But With <span class="three">THREE</span> Additional Bottles Instead of 6…</h1>
+        <div class="main_heading upsell-heading">
+          <h2 class="upsell-title"><mark>Please Watch This Video For an Important Message About Your&nbsp;Order</mark> </h2>
         </div>
 
-        <!-- Description Text -->
-        <div class="description">
-          <p class="paragraph">I understand 6 more bottles of Thyo Activator Advanced might not be for everyone…</p>
-          <p class="paragraph">But I still want to give you the opportunity to <span>stock-up for just $39 per bottle today</span>, with our more moderate 3-bottle package.</p>
-          <p class="paragraph">Of course, you’ll also avoid paying the full price later by taking advantage of this opportunity to get a 3 month supply (3 bottles with 30 servings) at the lowest possible price.</p>
-          <p class="paragraph">However, $39 is really as low as I can go while still covering all my costs… so you probably won’t see this offer again.</p>
-          <p class="paragraph">Yet, since you’re backed up by my rock-solid, 100% Money Back Guarantee...</p>
-          <p class="paragraph">It’s simply common sense to take advantage of this offer now, instead of paying full price later.</p>
-          <p class="paragraph">So, click the <span>“Add To My Order”</span> button below to secure this heavily discounted special price while it’s still available.</p>
+        <!-- Free Video -->
+        <div class="free-video">
+          <div class="video-placeholder">
+            <a class="play" href="#!">
+              <img class="video-info img-responsive" src="imgs/upsell/video-info.svg" data-video="https://www.youtube.com/embed/wgSQyza_iF4?rel=0&autoplay=1" alt="">
+            </a>
+          </div>
         </div>
 
         <!-- Limited Time Offer -->
         <div class="limited_time_offer">
           <div class="offer_61">
             <div class="offer_content">
-              <h3>Last Chance To Save 61%!</h3>
+              <h3>One-Time Chance To Save 61%!</h3>
               <p>Special Pricing not guaranteed past today!</p>
             </div>
           </div>
 
           <h2 class="main_title">Get Your Discounted 90 Day Supply Now, So You Don't Run Out!</h2>
           <div class="bottles">
-            <img class="img-responsive lazyload" data-src="imgs/bottles.png" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="bottles">
+            <img class="img-responsive lazyload" data-src="imgs/upsell/bottles.png" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="bottles">
           </div>
 
           <div class="bottle_price">
@@ -88,15 +87,15 @@
             </div>
             <div class="save">
               <div class="old_price">
-                <del>$297</del>
+                <del>$594</del>
               </div>
               <div class="new_price">
-                <h3>Save $120</h3>
+                <h3>Save $360</h3>
               </div>
             </div>
           </div>
 
-          <button class="d-block add_to_cart">ADD TO CART</button>
+          <a href="cart.html" class="d-block add_to_cart">ADD TO CART</a>
           <p class="free_shipping">
             <img class="lazyload" data-src="imgs/delivery-fast.svg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="delivery-fast">
             <span>Free Shipping</span>
@@ -118,7 +117,7 @@
 
         <!-- Offer Refued Link -->
         <div class="refuse_offer">
-          <a href="#">No thanks, I’d like to pass up this one-time offer for 61% off…</a>
+          <a href="#">No thanks, I understand this is my only chance to access this special offer, and I’m okay with missing out on my two free bottles and the chance to save $180 dollars. Instead, when I’m blown away by the results I get using Thyo Activator Advanced, I’ll just pay the full $69.95 price for those bottles instead of receiving them for today.</a>
         </div>
 
       </div>
@@ -146,6 +145,7 @@
       </div>
     </div>
     <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
