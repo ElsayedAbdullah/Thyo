@@ -332,12 +332,6 @@ p {
   margin: 7px 0 3px;
 }
 
-@media (max-width: 425px) {
-  .notice_box .one {
-    max-width: 260px;
-  }
-}
-
 @media (max-width: 767px) {
   .notice_box .one {
     font-size: 14px;
@@ -354,13 +348,6 @@ p {
 @media (max-width: 767px) {
   .notice_box .two {
     font-size: 14px;
-  }
-}
-
-@media (max-width: 425px) {
-  .notice_box .two {
-    max-width: 230px;
-    margin: auto;
   }
 }
 
@@ -571,7 +558,6 @@ p {
   .offer h3 {
     font-size: 17px;
     line-height: 24px;
-    margin-bottom: 5px;
   }
 }
 
@@ -579,14 +565,20 @@ p {
   font-weight: 500;
   font-size: 16px;
   line-height: 22px;
-  margin-top: -6px;
+  margin-top: -5px;
 }
 
 @media (max-width: 767px) {
   .offer p {
     font-size: 14px;
     line-height: 19px;
-    padding: 0 30px;
+  }
+}
+
+@media (max-width: 390px) {
+  .offer p {
+    max-width: 190px;
+    margin: auto;
   }
 }
 
@@ -1211,7 +1203,7 @@ footer .copyright p {
   }
 }
 
-.free-video iframe {
+.free-video video {
   position: absolute;
   top: 0;
   left: 0;
@@ -1374,6 +1366,12 @@ footer .copyright p {
   padding-top: 70px;
 }
 
+@media (max-width: 915px) {
+  .limited_offer.pt-70 {
+    padding-top: 50px;
+  }
+}
+
 .limited_offer .burn_faster-title {
   margin-bottom: 30px;
 }
@@ -1509,6 +1507,11 @@ footer .copyright p {
             order: 1;
     margin-bottom: 20px;
   }
+}
+
+.limited_offer .pricing-plans .plan > img {
+  max-width: 233px;
+  margin: auto;
 }
 
 .limited_offer .pricing-plans .price-title {

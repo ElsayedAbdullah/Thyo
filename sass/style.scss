@@ -302,9 +302,6 @@ p {
     line-height: 22px;
     color: #3f352f;
     margin: 7px 0 3px;
-    @media (max-width: 425px) {
-      max-width: 260px;
-    }
     @media #{$mobile} {
       font-size: 14px;
       margin: 10px auto 6px;
@@ -316,10 +313,6 @@ p {
     color: #827b79;
     @media #{$mobile} {
       font-size: 14px;
-    }
-    @media (max-width: 425px) {
-      max-width: 230px;
-      margin: auto;
     }
   }
 }
@@ -479,18 +472,20 @@ p {
     @media #{$mobile} {
       font-size: 17px;
       line-height: 24px;
-      margin-bottom: 5px;
     }
   }
   p {
     font-weight: 500;
     font-size: 16px;
     line-height: 22px;
-    margin-top: -6px;
+    margin-top: -5px;
     @media #{$mobile} {
       font-size: 14px;
       line-height: 19px;
-      padding: 0 30px;
+    }
+    @media (max-width: 390px) {
+      max-width: 190px;
+      margin: auto;
     }
   }
 }
@@ -939,7 +934,7 @@ footer {
     width: calc(100% - 20px);
     margin: 20px 10px 65px;
   }
-  iframe {
+  video {
     position: absolute;
     top: 0;
     left: 0;
@@ -1061,6 +1056,9 @@ footer {
 .limited_offer {
   &.pt-70 {
     padding-top: 70px;
+    @media #{$maxTab} {
+      padding-top: 50px;
+    }
   }
   .burn_faster-title {
     margin-bottom: 30px;
@@ -1144,6 +1142,10 @@ footer {
           margin-bottom: 20px;
         }
       }
+      > img {
+        max-width: 233px;
+        margin: auto;
+      }
     }
     .price-title {
       font-size: 24px;
@@ -1151,6 +1153,7 @@ footer {
       text-align: center;
       color: #5d514d;
     }
+    
 
     .price-back {
       font-weight: 500;
