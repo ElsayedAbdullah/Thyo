@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Thyo Activator | Checkout Page</title>
+    <link rel="preload" href="fonts/Konnect-Regular.woff" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="fonts/Konnect-Bold.woff" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="fonts/Konnect-SemiBold.woff" as="font" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Lazysizes -->
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.0/lazysizes.min.js"></script>
+  </head>
+  <body class="bg-white">
+    <header class="checkout_header bg-light">
+      <div class="wrapper">
+        <div class="container">
+          <div class="header_content d-flex align-items-center">
+            <div class="secure-checkout d-flex align-items-center">
+              <div class="desc">
+                <img class="privacy_icon d-none d-md-inline-block" src="imgs/checkout/privacy-icon.svg" alt="privacy-icon">
+                <h4>
+                  <img class="d-inline-block d-md-none" src="imgs/checkout/privacy-icon-sm.svg" alt="privacy-icon">
+                  Secure Checkout <span>(256 BIT ENCRYPTION)</span></h4>
+                <ul>
+                  <li class="d-flex align-items-center">
+                    <img src="imgs/checkout/check-icon.svg" alt="check-icon">
+                    <p>100% Money Back Garantee</p>
+                  </li>
+                  <li class="d-flex align-items-center">
+                    <img src="imgs/checkout/check-icon.svg" alt="check-icon">
+                    <p>180-Day Returns</p>
+                  </li>
+                  <li class="d-flex align-items-center">
+                    <img src="imgs/checkout/check-icon.svg" alt="check-icon">
+                    <p class="d-flex align-items-center">Made in <img src="imgs/checkout/usa_flag.svg" alt="usa_flag img"></p>
+                  </li>
+                </ul>
+              </div>
+              
+            </div>
+            <div class="logos d-flex align-items-center">
+              <img src="imgs/checkout/trust_badge.png" alt="trust_badge">
+              <img src="imgs/checkout/mcafee-icon.svg" alt="mcafee-icon">
+              <img src="imgs/checkout/norton-logo.png" alt="norton-logo">
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    
+    <div class="wrapper">
+      
+      <div class="order">
+        <div class="container">
+          <div class="order-content">
+            <div class="secure_order">
+              <div class="order_form">
+                <h3>
+                  <img src="imgs/checkout/secured-icon.svg" alt="secured-icon">
+                  <span>Secure Order Form</span>
+                </h3>
+                <form>
+                  <div class="form-group">
+                    <label for="email">Your Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email">
+                  </div>
+                  <div class="form-group">
+                    <label for="fname">First Name:</label>
+                    <input type="text" id="fname" name="fname" placeholder="First Name">
+                  </div>
+                  <div class="form-group">
+                    <label for="lname">Last Name:</label>
+                    <input type="text" id="lname" name="lname" placeholder="Last Name">
+                  </div>
+                  <div class="form-group">
+                    <label for="st-address">Street Address:</label>
+                    <input type="text" id="st-address" name="st-address" placeholder="St Address">
+                  </div>
+                  <div class="form-group">
+                    <label for="city">City:</label>
+                    <input type="text" id="city" name="city" placeholder="City">
+                  </div>
+                  <div class="form-group">
+                    <label for="state">State:</label>
+                    <select name="state" id="state">
+                      <option value="state1">State 1</option>
+                      <option value="state2">State 2</option>
+                      <option value="state3">State 3</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="zip">ZIP:</label>
+                    <input type="text" id="zip" name="zip" placeholder="Zip/Postal Code">
+                  </div>
+                  <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="e.g (406) 555-0120">
+                  </div>
+                  <div class="form-group checkbox">
+                    <input type="checkbox" name="billing_address" id="billing_address">
+                    <label for="billing_address">Billing address same as shipping.</label>
+                  </div>
+                  <div class="payment_methods">
+                    <ul>
+                      <li><img src="imgs/checkout/visa.svg" alt="visa img"></li>
+                      <li><img src="imgs/checkout/mastercard.svg" alt="mastercard img"></li>
+                      <li><img src="imgs/checkout/amex.svg" alt="amex img"></li>
+                      <li><img src="imgs/checkout/discover.svg" alt="discover img"></li>
+                      <li><img src="imgs/checkout/paypal.svg" alt="paypal img"></li>
+                    </ul>
+                  </div>
+                  <div class="form-group">
+                    <label for="card_num">Card Number:</label>
+                    <input type="text" id="card_num" name="card_num" placeholder="e.g 1111 2222 3333 4444">
+                  </div>
+                  <div class="form-group">
+                    <label for="card_num">Expiration Date:</label>
+                    <div class="expiration_date">
+                      <select name="month" id="month">
+                        <option value="month1">Month one</option>
+                        <option value="month2">Month two</option>
+                        <option value="month3">Month three</option>
+                      </select>
+                      <select name="year" id="year">
+                        <option value="year1">Year one</option>
+                        <option value="year2">Year two</option>
+                        <option value="year3">Year three</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="card_cvc">Verification Code:</label>
+                    <div class="card-cvc">
+                      <input type="text" id="card_cvc" name="card_cvc" placeholder="CVV / CVC">
+                      <div class="info">
+                        <img src="imgs/checkout/info-icon.svg" alt="info-icon">
+                      </div>
+                    </div>
+                  </div>
+                  <button class="order_now_btn" type="submit">ORDER NOW <img src="imgs/checkout/arrow.svg" alt="arrow"></button>
+                </form>
+                
+              </div>
+              <ul class="trust_badges">
+                <li><img class="trust_img" src="imgs/checkout/trust.png" alt="trust badge"></li>
+                <li><img class="mcafee_img" src="imgs/checkout/mcafee.svg" alt="mcafee icon"></li>
+                <li><img class="norton_img" src="imgs/checkout/norton.svg" alt="norton logo"></li>
+              </ul>
+            </div>
+            <div class="product_info">
+              <img class="product_img img-responsive" src="imgs/checkout/six-bottles.png" alt="six-bottles">
+              <ul>
+                <li>
+                  <div class="item">
+                    <img src="imgs/checkout/check_orange.svg" alt="check-icon">
+                    <p>Free Bottle of Turmeric</p>
+                  </div>
+                  <div class="cost">
+                    <span class="old_price"><del>$69</del></span>
+                    <span class="new_price">FREE</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="item">
+                    <img src="imgs/checkout/check_orange.svg" alt="check-icon">
+                    <p>2 ebooks</p>
+                  </div>
+                  <div class="cost">
+                    <span class="old_price"><del>$78</del></span>
+                    <span class="new_price">FREE</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="item">
+                    <img src="imgs/checkout/check_orange.svg" alt="check-icon">
+                    <p>Subscription to VIP Newsletter</p>
+                  </div>
+                  <div class="cost">
+                    <span class="new_price">FREE</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="item">
+                    <img src="imgs/checkout/check_orange.svg" alt="check-icon">
+                    <p>6 Bottles of Thyo Activator Advanced</p>
+                  </div>
+                  <div class="cost">
+                    <span class="old_price"><del>$594</del></span>
+                    <span class="new_price">$294</span>
+                  </div>
+                </li>
+              </ul>
+              <div class="order_summary">
+                <div class="original-price">
+                  <span>Original Price: </span>
+                  <span class="price">$741</span>
+                </div>
+                <div class="your-price">
+                  <span>Your Price: </span>
+                  <span class="price">$294</span>
+                </div>
+                <div class="savings">
+                  <span>Savings: </span>
+                  <span class="price">$447</span>
+                </div>
+              </div>
+              <div class="order_money_back">
+                <img src="imgs/checkout/money_back_badge_sm.svg" alt="money_back_badge 100%">
+                <h4>100% Money Back Guarantee</h4>
+                <p>Your happiness is our #1 and only priority. If you’re not absolutely thrilled, just contact our customer support team within 180 days for a no-hassle 100% refund.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="product_awards">
+          <div class="product_awards_content">
+            <div class="money_back">
+              <img src="imgs/checkout/money_back_badge_lg.svg" alt="money_back_badge">
+              <h4>180-Day, 100% Money Back Guarantee</h4>
+              <p>Your happiness is our #1 and only priority. If you’re not thrilled with all the stubborn belly fat you burn off, and how much younger you look and feel, then  call or email our friendly customer support team within 180 days for a speedy and courteous 100% refund. No hassles, no questions asked, and no hard feelings. You can even keep the bonuses.</p>
+            </div>
+            <div class="usa_manufacture">
+              <img src="imgs/checkout/usa_manufactured_badge.svg" alt="usa_manufacture">
+              <h4>Formulated and Developed in&nbsp;USA</h4>
+              <p>All of our products are manufactured in a state-of-the-art, GMP-certified facility right here in the USA. We're proud to be a 100% American-owned company. We do not outsource manufacturing to foreign countries — and we never will. God bless the USA.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="customers_testimonials">
+          <h2 class="main_title text-center">Customers Testimonials</h2>
+          <div class="customer_testimonial">
+            <div class="author_img">
+              <img src="imgs/checkout/jill.png" alt="author img">
+              <img src="imgs/checkout/verified.svg" alt="verified_badge" class="verified_badge">
+            </div>
+            <div class="author_info">
+              <p class="name"><span> Jill, 52 </span>Green Bay, Wisconsin</p>
+              <p class="quote">"I feel like a brand new woman. My joints feel better, I wake up with a ton of energy, and I just feel more  confident when I get dressed in the morning. I have to pinch myself when I look in the mirror, because I can't believe how much weight I've lost."</p>
+            </div>
+          </div>
+          <div class="customer_testimonial">
+            <div class="author_img">
+              <img src="imgs/checkout/patti.png" alt="author img">
+              <img src="imgs/checkout/verified.svg" alt="verified_badge" class="verified_badge">
+            </div>
+            <div class="author_info">
+              <p class="name"><span> Patti, 39 </span>Nashville, TN</p>
+              <p class="quote">"I'm losing weight so quickly my husband can't believe it. It feels so good to not think about food all the time anymore. I can finally eat out GUILT FREE because I know my metabolism is working for me, instead of against me. I know this sounds cheesy, but this supplement has completely changed my life."</p>
+            </div>
+          </div>
+          <div class="customer_testimonial">
+            <div class="author_img">
+              <img src="imgs/checkout/john.png" alt="author img">
+              <img src="imgs/checkout/verified.svg" alt="verified_badge" class="verified_badge">
+            </div>
+            <div class="author_info last">
+              <p class="name"><span> John, 61 </span>Orlando, Florida</p>
+              <p class="quote">"I was truly skeptical as men have fewer thyroid problems issues than women... but apparently I'm one of the few "lucky" guys with thyroid issues!! Because ever since starting on this supplement, I'm losing weight every week, I sleep better, I feel more energy, and even my hair looks thicker. My wife also commented the other day that I just seem younger. Thank you for making this. I just bought more. God bless."</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="pruchase_terms">
+          <h3>Terms of purchase:</h3>
+          <p><span>&bull;</span> Your purchase will appear on your bank statement under the name "ThyoActivatr8443835262" </p>
+          <p><span>&bull;</span> Return Policy: You may return the purchased product with a 180 days period starting from the   
+            day we ship the product</p>
+          <p><span>&bull;</span> Your IP has been recorded, all attempts to fraud will be prosecuted. information submitted by
+            this payment process is handled within the constraints of our Privacy Policy</p>
+          <p><span>&bull;</span> By placing this order, you agree to the terms of purchase presented above.</p>
+        </div>
+      </div>
+
+      <div class="container">
+        <!-- Footer -->
+        <footer>
+          <div class="footer_content">
+            <div class="logo">
+              <a href="#">
+                <img class="lazyload" data-src="imgs/logo.png" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="logo">
+              </a>
+            </div>
+            <ul class="footer_links">
+              <li><a href="#">Privacy</a></li>
+              <li><a href="#">Disclaimer</a></li>
+              <li><a href="#">Terms</a></li>
+              <li><a href="#">Studies</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="copyright">
+            <p>Copyright&copy; 2021 SN Life Organics | All Rights Reserved</p>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
