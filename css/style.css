@@ -1351,10 +1351,7 @@ footer .copyright p {
   position: relative;
   overflow: hidden;
   border: 7px solid #5d514d;
-  background-color: #000;
   border-radius: 17px;
-  padding-bottom: 54%;
-  height: 0;
 }
 
 @media (min-width: 768px) and (max-width: 915px) {
@@ -2261,7 +2258,7 @@ h2.burn_faster-title span {
 
 @media (max-width: 550px) {
   .vitamin-d3 .vitamin_d_img {
-    max-height: 300px;
+    max-height: 260px;
   }
 }
 
@@ -2545,9 +2542,127 @@ h2.burn_faster-title span {
   }
 }
 
+.order .order-content .secure_order .select2-container {
+  width: 100% !important;
+}
+
+.order .order-content .secure_order .select2-container--default .select2-selection--single {
+  text-align: left;
+  height: 48px;
+  line-height: 48px;
+  border: 1px solid #ccc9c8;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+@media (max-width: 915px) {
+  .order .order-content .secure_order .select2-container--default .select2-selection--single {
+    height: 40px;
+    line-height: 40px;
+    border-radius: 6px;
+    margin-bottom: 8px;
+  }
+}
+
+.order .order-content .secure_order .select2-container--default .select2-selection--single.validate-error {
+  border-color: #e4181a;
+}
+
+.order .order-content .secure_order .select2-container--default .select2-results > .select2-results__options {
+  text-align: left;
+}
+
+.order .order-content .secure_order .select2-results__option {
+  padding: 12px 24px;
+}
+
+@media (max-width: 915px) {
+  .order .order-content .secure_order .select2-results__option {
+    padding: 12px;
+  }
+}
+
+.order .order-content .secure_order .select2-container--default .select2-selection--single .select2-selection__rendered {
+  padding-left: 24px;
+  line-height: 48px;
+}
+
+@media (max-width: 915px) {
+  .order .order-content .secure_order .select2-container--default .select2-selection--single .select2-selection__rendered {
+    padding-left: 12px;
+    line-height: 40px;
+  }
+}
+
+.order .order-content .secure_order .select2-container--default .select2-selection--single .select2-selection__arrow {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 10px;
+  background-image: url(../imgs/checkout/arrow-down.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.order .order-content .secure_order .select2-container--default .select2-selection--single .select2-selection__arrow b {
+  display: none;
+}
+
+.order .order-content .secure_order .select2-dropdown {
+  border-color: #ccc9c8;
+  font-size: 14px;
+}
+
+.order .order-content .secure_order .select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+  background-color: #02643e;
+}
+
+.order .order-content .secure_order .select2-container--default.select2-container--open.select2-container--below .select2-selection--single {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.order .order-content .secure_order .select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow {
+  -webkit-transform: rotate(180deg) translateY(14px);
+          transform: rotate(180deg) translateY(14px);
+}
+
+.order .order-content .secure_order .select2-container--default .select2-selection--single .select2-selection__placeholder {
+  color: #827b79;
+  font-size: 14px;
+  font-weight: normal;
+}
+
 .order .order-content .secure_order .form-group {
   margin-bottom: 12px;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+@media (max-width: 915px) {
+  .order .order-content .secure_order .form-group {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
 }
 
 .order .order-content .secure_order .form-group label {
@@ -2568,8 +2683,48 @@ h2.burn_faster-title span {
   }
 }
 
+.order .order-content .secure_order .form-group img {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  display: none;
+}
+
+.order .order-content .secure_order .form-group.select_box img.check, .order .order-content .secure_order .form-group.card-cvc img.check {
+  right: 40px;
+}
+
+.order .order-content .secure_order .form-group .field_container {
+  position: relative;
+  width: 365px;
+}
+
+@media (max-width: 915px) {
+  .order .order-content .secure_order .form-group .field_container {
+    width: 100%;
+  }
+}
+
+.order .order-content .secure_order .form-group .field_container.validate .true {
+  display: block;
+}
+
+.order .order-content .secure_order .form-group .field_container.validate .error {
+  display: none;
+}
+
+.order .order-content .secure_order .form-group .field_container.not-validate .error {
+  display: block;
+}
+
+.order .order-content .secure_order .form-group .field_container.not-validate .true {
+  display: none;
+}
+
 .order .order-content .secure_order .form-group input:not(input[type="checkbox"]),
-.order .order-content .secure_order .form-group > select {
+.order .order-content .secure_order .form-group select {
   width: 365px;
   background: #ffffff;
   border: 1px solid #ccc9c8;
@@ -2578,32 +2733,50 @@ h2.burn_faster-title span {
   padding: 0 24px;
   font-family: "Open Sans";
   font-weight: 600;
-  font-size: 16px;
+  font-size: 14px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  color: #23201f !important;
 }
 
 .order .order-content .secure_order .form-group input:not(input[type="checkbox"])::-webkit-input-placeholder,
-.order .order-content .secure_order .form-group > select::-webkit-input-placeholder {
+.order .order-content .secure_order .form-group select::-webkit-input-placeholder {
   color: #827b79;
+  font-weight: normal;
 }
 
 .order .order-content .secure_order .form-group input:not(input[type="checkbox"]):-ms-input-placeholder,
-.order .order-content .secure_order .form-group > select:-ms-input-placeholder {
+.order .order-content .secure_order .form-group select:-ms-input-placeholder {
   color: #827b79;
+  font-weight: normal;
 }
 
 .order .order-content .secure_order .form-group input:not(input[type="checkbox"])::-ms-input-placeholder,
-.order .order-content .secure_order .form-group > select::-ms-input-placeholder {
+.order .order-content .secure_order .form-group select::-ms-input-placeholder {
   color: #827b79;
+  font-weight: normal;
 }
 
 .order .order-content .secure_order .form-group input:not(input[type="checkbox"])::placeholder,
-.order .order-content .secure_order .form-group > select::placeholder {
+.order .order-content .secure_order .form-group select::placeholder {
   color: #827b79;
+  font-weight: normal;
+}
+
+.order .order-content .secure_order .form-group input:not(input[type="checkbox"]):hover, .order .order-content .secure_order .form-group input:not(input[type="checkbox"]):focus,
+.order .order-content .secure_order .form-group select:hover,
+.order .order-content .secure_order .form-group select:focus {
+  border-color: #aea9a8;
+}
+
+.order .order-content .secure_order .form-group input:not(input[type="checkbox"]).validate-error,
+.order .order-content .secure_order .form-group select.validate-error {
+  border: 1px solid #e4181a;
 }
 
 @media (max-width: 915px) {
   .order .order-content .secure_order .form-group input:not(input[type="checkbox"]),
-  .order .order-content .secure_order .form-group > select {
+  .order .order-content .secure_order .form-group select {
     font-size: 14px;
     height: 40px;
     width: 100%;
@@ -2611,26 +2784,26 @@ h2.burn_faster-title span {
     border-radius: 6px;
   }
   .order .order-content .secure_order .form-group input:not(input[type="checkbox"])::-webkit-input-placeholder,
-  .order .order-content .secure_order .form-group > select::-webkit-input-placeholder {
+  .order .order-content .secure_order .form-group select::-webkit-input-placeholder {
     font-weight: 400;
   }
   .order .order-content .secure_order .form-group input:not(input[type="checkbox"]):-ms-input-placeholder,
-  .order .order-content .secure_order .form-group > select:-ms-input-placeholder {
+  .order .order-content .secure_order .form-group select:-ms-input-placeholder {
     font-weight: 400;
   }
   .order .order-content .secure_order .form-group input:not(input[type="checkbox"])::-ms-input-placeholder,
-  .order .order-content .secure_order .form-group > select::-ms-input-placeholder {
+  .order .order-content .secure_order .form-group select::-ms-input-placeholder {
     font-weight: 400;
   }
   .order .order-content .secure_order .form-group input:not(input[type="checkbox"])::placeholder,
-  .order .order-content .secure_order .form-group > select::placeholder {
+  .order .order-content .secure_order .form-group select::placeholder {
     font-weight: 400;
   }
 }
 
 .order .order-content .secure_order .form-group input:not(input[type="checkbox"]):active, .order .order-content .secure_order .form-group input:not(input[type="checkbox"]):focus,
-.order .order-content .secure_order .form-group > select:active,
-.order .order-content .secure_order .form-group > select:focus {
+.order .order-content .secure_order .form-group select:active,
+.order .order-content .secure_order .form-group select:focus {
   outline: none;
 }
 
@@ -2639,6 +2812,9 @@ h2.burn_faster-title span {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 @media (max-width: 767px) {
@@ -2648,72 +2824,78 @@ h2.burn_faster-title span {
   }
 }
 
-.order .order-content .secure_order .form-group .expiration_date select {
+.order .order-content .secure_order .form-group .expiration_date .field_container {
+  width: 49%;
+}
+
+@media (max-width: 767px) {
+  .order .order-content .secure_order .form-group .expiration_date .field_container {
+    width: 100%;
+  }
+}
+
+.order .order-content .secure_order .form-group .expiration_date .field_container select {
   background: #ffffff;
   border: 1px solid #ccc9c8;
   border-radius: 8px;
   height: 48px;
   padding: 0 24px;
-  width: 100%;
 }
 
-.order .order-content .secure_order .form-group .expiration_date select::-webkit-input-placeholder {
+.order .order-content .secure_order .form-group .expiration_date .field_container select::-webkit-input-placeholder {
   color: #827b79;
 }
 
-.order .order-content .secure_order .form-group .expiration_date select:-ms-input-placeholder {
+.order .order-content .secure_order .form-group .expiration_date .field_container select:-ms-input-placeholder {
   color: #827b79;
 }
 
-.order .order-content .secure_order .form-group .expiration_date select::-ms-input-placeholder {
+.order .order-content .secure_order .form-group .expiration_date .field_container select::-ms-input-placeholder {
   color: #827b79;
 }
 
-.order .order-content .secure_order .form-group .expiration_date select::placeholder {
+.order .order-content .secure_order .form-group .expiration_date .field_container select::placeholder {
   color: #827b79;
 }
 
-.order .order-content .secure_order .form-group .expiration_date select::-webkit-input-placeholder::placeholder {
+.order .order-content .secure_order .form-group .expiration_date .field_container select::-webkit-input-placeholder::placeholder {
   font-weight: 400;
 }
 
-.order .order-content .secure_order .form-group .expiration_date select:-ms-input-placeholder::placeholder {
+.order .order-content .secure_order .form-group .expiration_date .field_container select:-ms-input-placeholder::placeholder {
   font-weight: 400;
 }
 
-.order .order-content .secure_order .form-group .expiration_date select::-ms-input-placeholder::placeholder {
+.order .order-content .secure_order .form-group .expiration_date .field_container select::-ms-input-placeholder::placeholder {
   font-weight: 400;
 }
 
-.order .order-content .secure_order .form-group .expiration_date select::placeholder::placeholder {
+.order .order-content .secure_order .form-group .expiration_date .field_container select::placeholder::placeholder {
   font-weight: 400;
 }
 
 @media (max-width: 915px) {
-  .order .order-content .secure_order .form-group .expiration_date select {
+  .order .order-content .secure_order .form-group .expiration_date .field_container select {
     height: 40px;
     padding: 0 12px;
+    width: 100%;
   }
 }
 
-.order .order-content .secure_order .form-group .expiration_date select:active, .order .order-content .secure_order .form-group .expiration_date select:focus {
+.order .order-content .secure_order .form-group .expiration_date .field_container select:active, .order .order-content .secure_order .form-group .expiration_date .field_container select:focus {
   outline: none;
-}
-
-.order .order-content .secure_order .form-group .expiration_date select#month {
-  margin-right: 12px;
-}
-
-@media (max-width: 767px) {
-  .order .order-content .secure_order .form-group .expiration_date select#month {
-    margin-right: 0;
-    margin-bottom: 8px;
-  }
 }
 
 .order .order-content .secure_order .form-group .card-cvc {
   position: relative;
   display: inline-block;
+}
+
+@media (max-width: 915px) {
+  .order .order-content .secure_order .form-group .card-cvc {
+    display: block;
+    width: 100%;
+  }
 }
 
 .order .order-content .secure_order .form-group .info {
@@ -2722,10 +2904,55 @@ h2.burn_faster-title span {
   right: 12px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+  display: block;
+  cursor: pointer;
+}
+
+.order .order-content .secure_order .form-group .info:hover + .tooltiptext {
+  opacity: 1;
+  visibility: visible;
+  top: -80px;
+}
+
+.order .order-content .secure_order .form-group .tooltiptext {
+  position: absolute;
+  display: inline-block;
+  background: #4f4f4f;
+  -webkit-box-shadow: 0px 6px 11px rgba(79, 79, 79, 0.3);
+          box-shadow: 0px 6px 11px rgba(79, 79, 79, 0.3);
+  width: 200px;
+  height: 80px;
+  font-size: 12px;
+  line-height: 14px;
+  color: #ffffff;
+  padding: 12px 17px;
+  top: -90px;
+  right: 0;
+  font-weight: 400;
+  opacity: 0;
+  visibility: hidden;
+  border-radius: 5px;
+  text-align: center;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.order .order-content .secure_order .form-group .tooltiptext:after {
+  content: "";
+  position: absolute;
+  border-width: 8px;
+  border-style: solid;
+  border-color: #4f4f4f transparent transparent transparent;
+  display: block;
+  bottom: -16px;
+  right: 5px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 1;
 }
 
 .order .order-content .secure_order .form-group.checkbox {
-  padding-right: 90px;
+  padding-right: 70px;
 }
 
 @media (max-width: 915px) {
@@ -2734,12 +2961,72 @@ h2.burn_faster-title span {
   }
 }
 
-.order .order-content .secure_order .form-group.checkbox label {
+.order .order-content .secure_order .form-group.checkbox .check_container {
+  display: inline-block;
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   font-family: "Open Sans";
-  font-style: normal;
   font-weight: 600;
   font-size: 14px;
-  line-height: 19px;
+  line-height: 24px;
+}
+
+.order .order-content .secure_order .form-group.checkbox .check_container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.order .order-content .secure_order .form-group.checkbox .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 24px;
+  width: 24px;
+  border: 1px solid #ccc9c8;
+  border-radius: 3px;
+  background-color: #fff;
+}
+
+.order .order-content .secure_order .form-group.checkbox .check_container:hover input ~ .checkmark {
+  border: 1px solid #aea9a8;
+  -webkit-box-shadow: 0px 2px 0px rgba(174, 169, 168, 0.1);
+          box-shadow: 0px 2px 0px rgba(174, 169, 168, 0.1);
+}
+
+.order .order-content .secure_order .form-group.checkbox .check_container input:checked ~ .checkmark {
+  background: #02643e;
+  border: 1px solid #02643e;
+}
+
+.order .order-content .secure_order .form-group.checkbox .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.order .order-content .secure_order .form-group.checkbox .check_container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.order .order-content .secure_order .form-group.checkbox .check_container .checkmark:after {
+  left: 7px;
+  top: 3px;
+  width: 4px;
+  height: 9px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 .order .order-content .secure_order .order_now_btn {
@@ -2763,6 +3050,11 @@ h2.burn_faster-title span {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  cursor: pointer;
+}
+
+.order .order-content .secure_order .order_now_btn:active, .order .order-content .secure_order .order_now_btn:focus {
+  outline: none;
 }
 
 @media (max-width: 915px) {
@@ -4202,7 +4494,7 @@ h2.burn_faster-title span {
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
   color: #02643e;
-  word-break: break-all;
+  word-break: break-word;
 }
 
 @media (max-width: 767px) {

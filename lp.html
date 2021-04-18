@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
 
+    <script src="https://fast.wistia.com/embed/medias/rrxyy8l8eo.jsonp" async></script>
+    <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
     <!-- Lazysizes -->
     <script async src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.0/lazysizes.min.js"></script>
   </head>
@@ -30,9 +32,14 @@
                 <p class="text-center">Your Video Is Playing</p>
                 <p class="text-center">Click To Unmute</p>
               </div>
-              <video controls="controls" autoplay="autoplay" id="lp-video">
-                <source src="videos/save_earth.mp4" type="video/mp4" />
-              </video>
+
+              <div class="wistia_responsive_padding" style="padding: 56.25% 0 0 0; position: relative">
+                <div class="wistia_responsive_wrapper" style="height: 100%; left: 0; position: absolute; top: 0; width: 100%">
+                  <div id="my_video" class="wistia_embed wistia_async_rrxyy8l8eo seo=false videoFoam=true" style="height: 100%; position: relative; width: 100%">
+                    <div class="wistia_swatch" style="height: 100%; left: 0; opacity: 0; overflow: hidden; position: absolute; top: 0; transition: opacity 200ms; width: 100%"><img src="https://fast.wistia.com/embed/medias/rrxyy8l8eo/swatch" style="filter: blur(5px); height: 100%; object-fit: contain; width: 100%" alt="" aria-hidden="true" onload="this.parentNode.style.opacity=1;" /></div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -49,7 +56,7 @@
               <div class="plan text-center plan-1-bottle">
                 <h3 class="price-title">1 BOTTLE</h3>
                 <h5 class="price-back text-upper">30-day Supply</h5>
-                <img class="img-responsive" src="imgs/landing/one-bottle.png" alt="one-bottle" />
+                <img class="img-responsive lazyload" data-src="imgs/landing/one-bottle.png" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="one-bottle" />
                 <div class="price">
                   <h2>$69</h2>
                   <h3>Per <span class="d-block">Bottle</span></h3>
@@ -61,7 +68,7 @@
               <div class="plan text-center plan-6-bottles saved_paln pb-0">
                 <h3 class="price-title">6 BOTTLES</h3>
                 <h5 class="price-back text-upper">180-day Supply</h5>
-                <img class="img-responsive" src="imgs/landing/six-bottles.png" alt="one-bottle" />
+                <img class="img-responsive lazyload" data-src="imgs/landing/six-bottles.png" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="one-bottle" />
                 <div class="price">
                   <h2>$49</h2>
                   <h3>Per <span class="d-block">Bottle</span></h3>
@@ -74,13 +81,13 @@
                     + <span>free</span> <br />
                     bonuses
                   </p>
-                  <img src="imgs/landing/bonus.png" alt="bonus" />
+                  <img class="lazyload" data-src="imgs/landing/bonus.png" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="bonus" />
                 </div>
               </div>
               <div class="plan text-center plan-3-bottles pb-0">
                 <h3 class="price-title">3 BOTTLES</h3>
                 <h5 class="price-back text-upper">90-day Supply</h5>
-                <img class="img-responsive" src="imgs/landing/three-bottles.png" alt="one-bottle" />
+                <img class="img-responsive lazyload" data-src="imgs/landing/three-bottles.png" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="one-bottle" />
                 <div class="price">
                   <h2>$59</h2>
                   <h3>Per <span class="d-block">Bottle</span></h3>
@@ -93,7 +100,7 @@
                     + <span>free</span> <br />
                     bonuses
                   </p>
-                  <img src="imgs/landing/bonus.png" alt="bonus" />
+                  <img class="lazyload" data-src="imgs/landing/bonus.png" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="bonus" />
                 </div>
               </div>
             </div>
@@ -131,11 +138,11 @@
               </a>
             </div>
             <ul class="footer_links">
-              <li><a href="#">Privacy</a></li>
-              <li><a href="#">Disclaimer</a></li>
-              <li><a href="#">Terms</a></li>
-              <li><a href="#">Studies</a></li>
-              <li><a href="#">Contact Us</a></li>
+              <li><a href="pp.html">Privacy</a></li>
+              <li><a href="disclaimer.html">Disclaimer</a></li>
+              <li><a href="terms.html">Terms</a></li>
+              <li><a href="resources.html">Studies</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
             </ul>
           </div>
           <div class="copyright">
@@ -149,5 +156,21 @@
 
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/main.js"></script>
+    <script>
+      window._wq = window._wq || [];
+      var video = $("#my_video");
+      _wq.push({
+        id: "rrxyy8l8eo",
+        onReady: function (video) {
+          $(".volume-mute").click(function () {
+            $(this).fadeOut();
+            video.unmute();
+          });
+          video.addToPlaylist("rrxyy8l8eo", {
+            playerColor: "367a5d"
+          });
+        }
+      });
+    </script>
   </body>
 </html>

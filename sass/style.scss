@@ -1054,10 +1054,7 @@ footer {
     position: relative;
     overflow: hidden;
     border: 7px solid #5d514d;
-    background-color: #000;
     border-radius: 17px;
-    padding-bottom: 54%;
-    height: 0;
     @media #{$tablet} {
       margin: 0 20px;
     }
@@ -1682,7 +1679,7 @@ h2.burn_faster-title {
     left: 0;
     max-height: 350px;
     @media (max-width: 550px) {
-      max-height: 300px;
+      max-height: 260px;
     }
   }
   .human_img {
@@ -1870,9 +1867,90 @@ h2.burn_faster-title {
           text-align: left;
         }
       }
+      .select2-container {
+        width: 100% !important;
+      }
+      .select2-container--default .select2-selection--single {
+        text-align: left;
+        height: 48px;
+        line-height: 48px;
+        border: 1px solid #ccc9c8;
+        border-radius: 8px;
+        outline: none;
+        font-size: 14px;
+        font-weight: 600;
+        @media #{$maxTab} {
+          height: 40px;
+          line-height: 40px;
+          border-radius: 6px;
+          margin-bottom: 8px;
+        }
+        &.validate-error {
+          border-color: #e4181a;
+        }
+      }
+
+      .select2-container--default .select2-results > .select2-results__options {
+        text-align: left;
+      }
+      .select2-results__option {
+        padding: 12px 24px;
+        @media #{$maxTab} {
+          padding: 12px;
+        }
+      }
+
+      .select2-container--default .select2-selection--single .select2-selection__rendered {
+        padding-left: 24px;
+        line-height: 48px;
+        @media #{$maxTab} {
+          padding-left: 12px;
+          line-height: 40px;
+        }
+      }
+      .select2-container--default .select2-selection--single .select2-selection__arrow {
+        top: 50%;
+        transform: translateY(-50%);
+        right: 10px;
+        background-image: url(../imgs/checkout/arrow-down.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        transform-origin: center;
+        transition: all 0.3s ease-in-out;
+        b {
+          display: none;
+        }
+      }
+      .select2-dropdown {
+        border-color: #ccc9c8;
+        font-size: 14px;
+      }
+      .select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+        background-color: #02643e;
+      }
+
+      .select2-container--default.select2-container--open.select2-container--below .select2-selection--single {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+      .select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow {
+        transform: rotate(180deg) translateY(14px);
+      }
+      .select2-container--default .select2-selection--single .select2-selection__placeholder {
+        color: #827b79;
+        font-size: 14px;
+        font-weight: normal;
+      }
       .form-group {
         margin-bottom: 12px;
         position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        @media #{$maxTab} {
+          flex-direction: column;
+          align-items: flex-start;
+        }
         label {
           font-family: "Konnect";
           font-weight: 500;
@@ -1887,8 +1965,45 @@ h2.burn_faster-title {
             margin-right: 0;
           }
         }
+        img {
+          position: absolute;
+          right: 20px;
+          top: 50%;
+          transform: translateY(-50%);
+          display: none;
+        }
+        &.select_box,
+        &.card-cvc {
+          img.check {
+            right: 40px;
+          }
+        }
+        .field_container {
+          position: relative;
+          width: 365px;
+          @media #{$maxTab} {
+            width: 100%;
+          }
+          &.validate {
+            .true {
+              display: block;
+            }
+            .error {
+              display: none;
+            }
+          }
+          &.not-validate {
+            .error {
+              display: block;
+            }
+            .true {
+              display: none;
+            }
+          }
+        }
+
         input:not(input[type="checkbox"]),
-        > select {
+        select {
           width: 365px;
           background: #ffffff;
           border: 1px solid #ccc9c8;
@@ -1897,10 +2012,21 @@ h2.burn_faster-title {
           padding: 0 24px;
           font-family: "Open Sans";
           font-weight: 600;
-          font-size: 16px;
+          font-size: 14px;
+          transition: all 0.3s ease-in-out;
+          color: #23201f !important;
           &::placeholder {
             color: #827b79;
+            font-weight: normal;
           }
+          &:hover,
+          &:focus {
+            border-color: #aea9a8;
+          }
+          &.validate-error {
+            border: 1px solid #e4181a;
+          }
+
           @media #{$maxTab} {
             font-size: 14px;
             height: 40px;
@@ -1919,36 +2045,37 @@ h2.burn_faster-title {
         .expiration_date {
           width: 365px;
           display: inline-flex;
+          justify-content: space-between;
           @media #{$mobile} {
             width: 100%;
             display: block;
           }
-          select {
-            background: #ffffff;
-            border: 1px solid #ccc9c8;
-            border-radius: 8px;
-            height: 48px;
-            padding: 0 24px;
-            width: 100%;
-            &::placeholder {
-              color: #827b79;
+          .field_container {
+            width: 49%;
+            @media #{$mobile} {
+              width: 100%;
+            }
+            select {
+              background: #ffffff;
+              border: 1px solid #ccc9c8;
+              border-radius: 8px;
+              height: 48px;
+              padding: 0 24px;
+
               &::placeholder {
-                font-weight: 400;
+                color: #827b79;
+                &::placeholder {
+                  font-weight: 400;
+                }
               }
-            }
-            @media #{$maxTab} {
-              height: 40px;
-              padding: 0 12px;
-            }
-            &:active,
-            &:focus {
-              outline: none;
-            }
-            &#month {
-              margin-right: 12px;
-              @media #{$mobile} {
-                margin-right: 0;
-                margin-bottom: 8px;
+              @media #{$maxTab} {
+                height: 40px;
+                padding: 0 12px;
+                width: 100%;
+              }
+              &:active,
+              &:focus {
+                outline: none;
               }
             }
           }
@@ -1956,24 +2083,120 @@ h2.burn_faster-title {
         .card-cvc {
           position: relative;
           display: inline-block;
+          @media #{$maxTab} {
+            display: block;
+            width: 100%;
+          }
         }
         .info {
           position: absolute;
           top: 50%;
           right: 12px;
           transform: translateY(-50%);
+          display: block;
+          cursor: pointer;
+          &:hover + .tooltiptext {
+            opacity: 1;
+            visibility: visible;
+            top: -80px;
+          }
+        }
+        .tooltiptext {
+          position: absolute;
+          display: inline-block;
+          background: #4f4f4f;
+          box-shadow: 0px 6px 11px rgba(79, 79, 79, 0.3);
+          width: 200px;
+          height: 80px;
+          font-size: 12px;
+          line-height: 14px;
+          color: #ffffff;
+          padding: 12px 17px;
+          top: -90px;
+          right: 0;
+          font-weight: 400;
+          opacity: 0;
+          visibility: hidden;
+          border-radius: 5px;
+          text-align: center;
+          transition: all 0.3s ease-in-out;
+          &:after {
+            content: "";
+            position: absolute;
+            border-width: 8px;
+            border-style: solid;
+            border-color: #4f4f4f transparent transparent transparent;
+            display: block;
+            bottom: -16px;
+            right: 5px;
+            transform: translateX(-50%);
+            z-index: 1;
+          }
         }
         &.checkbox {
-          padding-right: 90px;
+          padding-right: 70px;
           @media #{$maxTab} {
             padding-right: 0;
           }
-          label {
+          .check_container {
+            display: inline-block;
+            position: relative;
+            padding-left: 35px;
+            cursor: pointer;
+            user-select: none;
             font-family: "Open Sans";
-            font-style: normal;
             font-weight: 600;
             font-size: 14px;
-            line-height: 19px;
+            line-height: 24px;
+          }
+
+          .check_container input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+            transition: all 0.3s ease-in-out;
+          }
+          .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 24px;
+            width: 24px;
+            border: 1px solid #ccc9c8;
+            border-radius: 3px;
+            background-color: #fff;
+          }
+
+          .check_container:hover input ~ .checkmark {
+            border: 1px solid #aea9a8;
+            box-shadow: 0px 2px 0px rgba(174, 169, 168, 0.1);
+          }
+
+          .check_container input:checked ~ .checkmark {
+            background: #02643e;
+            border: 1px solid #02643e;
+          }
+
+          .checkmark:after {
+            content: "";
+            position: absolute;
+            display: none;
+          }
+
+          .check_container input:checked ~ .checkmark:after {
+            display: block;
+          }
+
+          .check_container .checkmark:after {
+            left: 7px;
+            top: 3px;
+            width: 4px;
+            height: 9px;
+            border: solid white;
+            border-width: 0 3px 3px 0;
+            transform: rotate(45deg);
           }
         }
       }
@@ -1992,6 +2215,11 @@ h2.burn_faster-title {
         display: inline-flex;
         justify-content: center;
         align-items: center;
+        cursor: pointer;
+        &:active,
+        &:focus {
+          outline: none;
+        }
         @media #{$maxTab} {
           width: 100%;
         }
@@ -2973,7 +3201,7 @@ h2.burn_faster-title {
             line-height: 30px;
             text-decoration-line: underline;
             color: #02643e;
-            word-break: break-all;
+            word-break: break-word;
             @media #{$mobile} {
               font-size: 16px;
               line-height: 26px;
