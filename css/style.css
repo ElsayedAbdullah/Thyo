@@ -1253,7 +1253,6 @@ footer .copyright p {
 }
 
 .free-video {
-  background: center/cover no-repeat url(../imgs/upsell/video-bg.png);
   position: relative;
   margin: 30px auto 52px;
   border-radius: 17px;
@@ -1296,6 +1295,7 @@ footer .copyright p {
 }
 
 .free-video a {
+  background: center/cover no-repeat url(../imgs/upsell/video-bg.png);
   position: absolute;
   top: 0;
   left: 0;
@@ -1464,7 +1464,6 @@ footer .copyright p {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  padding: 0 80px;
 }
 
 .limited_offer .pricing-plans.forskolin_prices {

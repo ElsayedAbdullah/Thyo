@@ -981,7 +981,7 @@ footer {
 
 // upsell page
 .free-video {
-  background: center / cover no-repeat url(../imgs/upsell/video-bg.png);
+  
   position: relative;
   margin: 30px auto 52px;
   border-radius: 17px;
@@ -1013,6 +1013,7 @@ footer {
     max-height: 85%;
   }
   a {
+    background: center / cover no-repeat url(../imgs/upsell/video-bg.png);
     position: absolute;
     top: 0;
     left: 0;
@@ -1132,7 +1133,6 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 0 80px;
     &.forskolin_prices {
       padding: 0 25px;
       .plan {

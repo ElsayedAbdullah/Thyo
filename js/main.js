@@ -1,13 +1,13 @@
 $(function () {
-  $("a.play").on("click", function (e) {
-    e.preventDefault();
-    $(this).fadeOut();
-    var video = `
-    <video controls autoplay >
-      <source src="videos/save_earth.mp4" type="video/mp4" />
-    </video>`;
-    $(".video-placeholder").replaceWith(video);
-  });
+  // $("a.play").on("click", function (e) {
+  //   e.preventDefault();
+  //   $(this).fadeOut();
+  //   // var video = `
+  //   // <video controls autoplay >
+  //   //   <source src="videos/save_earth.mp4" type="video/mp4" />
+  //   // </video>`;
+  //   // $(".video-placeholder").replaceWith(video);
+  // });
 
   var inputEmail = $("#email");
   // function to validate the email

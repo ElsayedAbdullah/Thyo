@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
 
+    <script src="https://fast.wistia.com/embed/medias/rrxyy8l8eo.jsonp" async></script>
+    <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
     <!-- Lazysizes -->
     <script async src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.0/lazysizes.min.js"></script>
   </head>
@@ -57,8 +59,15 @@
           <div class="free-video">
             <div class="video-placeholder">
               <a class="play" href="#!">
-                <img class="video-info img-responsive" src="imgs/upsell/video-info.svg" data-video="https://www.youtube.com/embed/wgSQyza_iF4?rel=0&autoplay=1" alt="" />
+                <img class="video-info img-responsive" src="imgs/upsell/video-info.svg" alt="" />
               </a>
+              <div class="wistia_responsive_padding" style="padding: 56.25% 0 0 0; position: relative">
+                <div class="wistia_responsive_wrapper" style="height: 100%; left: 0; position: absolute; top: 0; width: 100%">
+                  <div class="wistia_embed wistia_async_rrxyy8l8eo seo=false videoFoam=true" style="height: 100%; position: relative; width: 100%">
+                    <div class="wistia_swatch" style="height: 100%; left: 0; opacity: 0; overflow: hidden; position: absolute; top: 0; transition: opacity 200ms; width: 100%"><img src="https://fast.wistia.com/embed/medias/rrxyy8l8eo/swatch" style="filter: blur(5px); height: 100%; object-fit: contain; width: 100%" alt="" aria-hidden="true" onload="this.parentNode.style.opacity=1;" /></div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -144,5 +153,20 @@
     </div>
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/main.js"></script>
+    <script>
+      window._wq = window._wq || [];
+      var video = $("#my_video");
+      _wq.push({
+        id: "rrxyy8l8eo",
+        onReady: function (video) {
+          $("a.play").click(function (e) {
+            e.preventDefault();
+            $(this).fadeOut();
+            $('.free-video').css("border-radius", 0)
+            video.play();
+          });
+        }
+      });
+    </script>
   </body>
 </html>
