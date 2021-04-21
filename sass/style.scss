@@ -916,6 +916,7 @@ footer {
     img {
       max-width: 180px;
     }
+    
   }
 
   .footer_links {
@@ -1797,6 +1798,9 @@ h2.burn_faster-title {
   .logos {
     @media #{$mobile} {
       padding-top: 15px;
+      img {
+        max-height: 35px;
+      }
     }
     img:nth-child(2) {
       margin: 0 16px;
@@ -2272,14 +2276,8 @@ h2.burn_faster-title {
         }
         @media #{$mobile} {
           margin: 0 3px;
-          .trust_img {
-            width: 63px;
-          }
-          .mcafee_img {
-            width: 101px;
-          }
-          .norton_img {
-            width: 90px;
+          img {
+            max-height: 35px;
           }
         }
       }

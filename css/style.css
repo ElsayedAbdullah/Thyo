@@ -2426,6 +2426,9 @@ h2.burn_faster-title span {
   .checkout_header .logos {
     padding-top: 15px;
   }
+  .checkout_header .logos img {
+    max-height: 35px;
+  }
 }
 
 .checkout_header .logos img:nth-child(2) {
@@ -3145,14 +3148,8 @@ h2.burn_faster-title span {
   .order .order-content .trust_badges li {
     margin: 0 3px;
   }
-  .order .order-content .trust_badges li .trust_img {
-    width: 63px;
-  }
-  .order .order-content .trust_badges li .mcafee_img {
-    width: 101px;
-  }
-  .order .order-content .trust_badges li .norton_img {
-    width: 90px;
+  .order .order-content .trust_badges li img {
+    max-height: 35px;
   }
 }
 
