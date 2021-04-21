@@ -2250,14 +2250,14 @@ h2.burn_faster-title span {
 
 .vitamin-d3 .vitamin_d_img {
   position: absolute;
-  bottom: -110px;
+  bottom: -90px;
   left: 0;
   max-height: 350px;
 }
 
 @media (max-width: 550px) {
   .vitamin-d3 .vitamin_d_img {
-    max-height: 260px;
+    max-height: 230px;
   }
 }
 
@@ -3632,12 +3632,6 @@ h2.burn_faster-title span {
 }
 
 .thx_header_content .contact_info div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   margin-left: 16px;
 }
 
@@ -3645,6 +3639,16 @@ h2.burn_faster-title span {
   .thx_header_content .contact_info div:not(:last-child) {
     margin-bottom: 12px;
   }
+}
+
+.thx_header_content .contact_info div a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
 }
 
 .thx_header_content .contact_info div img {
@@ -4138,14 +4142,16 @@ h2.burn_faster-title span {
   margin: auto;
 }
 
-.contact_us .box h4 {
+.contact_us .box h4 a {
   font-weight: 500;
   font-size: 21px;
   line-height: 27px;
+  text-decoration: none;
+  color: #23201f;
 }
 
 @media (max-width: 767px) {
-  .contact_us .box h4 {
+  .contact_us .box h4 a {
     font-size: 18px;
     line-height: 23px;
   }
@@ -4345,7 +4351,8 @@ h2.burn_faster-title span {
   }
 }
 
-.page_content .content .contact_way .email .icon img,
+.page_content .content .contact_way .email .icon a, .page_content .content .contact_way .email .icon img,
+.page_content .content .contact_way .address .icon a,
 .page_content .content .contact_way .address .icon img {
   margin: auto;
 }

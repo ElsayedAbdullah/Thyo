@@ -1675,11 +1675,11 @@ h2.burn_faster-title {
   }
   .vitamin_d_img {
     position: absolute;
-    bottom: -110px;
+    bottom: -90px;
     left: 0;
     max-height: 350px;
     @media (max-width: 550px) {
-      max-height: 260px;
+      max-height: 230px;
     }
   }
   .human_img {
@@ -2616,13 +2616,17 @@ h2.burn_faster-title {
       }
     }
     div {
-      display: flex;
-      align-items: center;
+      
       margin-left: 16px;
       @media #{$mobile} {
         &:not(:last-child) {
           margin-bottom: 12px;
         }
+      }
+      a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
       }
       img {
         margin-right: 6px;
@@ -2965,12 +2969,16 @@ h2.burn_faster-title {
       }
     }
     h4 {
-      font-weight: 500;
+      a {
+        font-weight: 500;
       font-size: 21px;
       line-height: 27px;
+      text-decoration: none;
+      color: #23201f;
       @media #{$mobile} {
         font-size: 18px;
         line-height: 23px;
+      }
       }
     }
     small {
@@ -3097,7 +3105,7 @@ h2.burn_faster-title {
           @media #{$mobile} {
             margin-right: 10px;
           }
-          img {
+          a,img {
             margin: auto;
           }
         }
