@@ -916,7 +916,6 @@ footer {
     img {
       max-width: 180px;
     }
-    
   }
 
   .footer_links {
@@ -982,7 +981,6 @@ footer {
 
 // upsell page
 .free-video {
-  
   position: relative;
   margin: 30px auto 52px;
   border-radius: 17px;
@@ -1446,6 +1444,9 @@ h2.burn_faster-title {
         border-radius: 17px;
         padding: 30px 60px;
         text-align: center;
+        img {
+          max-width: 180px;
+        }
         @media #{$mobile} {
           padding: 15px 25px;
           margin: 0 2px;
@@ -1611,6 +1612,7 @@ h2.burn_faster-title {
     position: relative;
     top: -40px;
     margin-right: 35px;
+    max-width: 275px;
     @media #{$mobile} {
       position: absolute;
       margin-right: 0;
@@ -1687,6 +1689,7 @@ h2.burn_faster-title {
     position: absolute;
     bottom: 0;
     right: 15px;
+    max-width: 440px;
     @media (max-width: 550px) {
       max-height: 235px;
     }
@@ -1716,11 +1719,17 @@ h2.burn_faster-title {
       }
       > img {
         margin-right: 18px;
+        
         @media (min-width: 768px) {
           position: absolute;
           left: 0;
           top: 50%;
           transform: translateY(-50%);
+        }
+
+        @media #{$tablet} {
+          top: 10px;
+          transform: translateY(0);
         }
       }
     }
@@ -1737,6 +1746,9 @@ h2.burn_faster-title {
         font-size: 18px;
         line-height: 23px;
         color: #179bd7;
+        @media #{$tablet} {
+          display: block;
+        }
       }
       @media #{$mobile} {
         margin-bottom: 16px;
@@ -1887,7 +1899,6 @@ h2.burn_faster-title {
           height: 40px;
           line-height: 40px;
           border-radius: 6px;
-          margin-bottom: 8px;
         }
         &.validate-error {
           border-color: #e4181a;
@@ -1985,8 +1996,10 @@ h2.burn_faster-title {
         .field_container {
           position: relative;
           width: 365px;
+          
           @media #{$maxTab} {
             width: 100%;
+            margin-bottom: 8px;
           }
           &.validate {
             .true {
@@ -2502,6 +2515,9 @@ h2.burn_faster-title {
     .author_img {
       margin-right: 30px;
       position: relative;
+      img {
+        max-width: 88px;
+      }
       @media #{$mobile} {
         margin-right: 0;
         display: inline-block;
@@ -2614,7 +2630,6 @@ h2.burn_faster-title {
       }
     }
     div {
-      
       margin-left: 16px;
       @media #{$mobile} {
         &:not(:last-child) {
@@ -2865,6 +2880,7 @@ h2.burn_faster-title {
       left: 24px;
       top: -30px;
       filter: drop-shadow(0px 3px 16px rgba(35, 32, 31, 0.3));
+      max-width: 76px;
       @media #{$tablet} {
         left: 16px;
       }
@@ -2903,6 +2919,74 @@ h2.burn_faster-title {
       img {
         margin-right: 5px;
       }
+    }
+  }
+}
+
+.purchase-gift {
+  padding: 0 95px 60px;
+
+  @media #{$tablet} {
+    padding: 0 35px 40px;
+  }
+  @media #{$mobile} {
+    padding: 0 15px 24px;
+  }
+  &-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .title {
+    font-size: 32px;
+    line-height: 42px;
+    color: #23201f;
+    span {
+      background: #02643e;
+      text-transform: uppercase;
+      color: #fff;
+      display: inline-block;
+      padding: 4px 10px 0;
+    }
+  }
+  .desc {
+    font-size: 18px;
+    line-height: 30px;
+    color: #23201f;
+    margin: 14px 0 20px;
+  }
+  ul {
+    li {
+      font-size: 14px;
+      line-height: 19px;
+      color: #5d514d;
+      display: flex;
+      align-items: center;
+      &:not(:last-child) {
+        margin-bottom: 16px;
+      }
+      img {
+        margin-right: 8px;
+      }
+    }
+  }
+  .text {
+    width: 57%;
+  }
+  .image {
+    width: 40%;
+    text-align: right;
+  }
+  .confirm-purchase {
+    text-align: center;
+    margin-top: 40px;
+    a {
+      font-family: "Open Sans";
+      font-size: 24px;
+      line-height: 33px;
+      text-align: center;
+      text-decoration-line: underline;
+      color: #179BD7;
     }
   }
 }
@@ -2969,14 +3053,14 @@ h2.burn_faster-title {
     h4 {
       a {
         font-weight: 500;
-      font-size: 21px;
-      line-height: 27px;
-      text-decoration: none;
-      color: #23201f;
-      @media #{$mobile} {
-        font-size: 18px;
-        line-height: 23px;
-      }
+        font-size: 21px;
+        line-height: 27px;
+        text-decoration: none;
+        color: #23201f;
+        @media #{$mobile} {
+          font-size: 18px;
+          line-height: 23px;
+        }
       }
     }
     small {
@@ -3103,7 +3187,8 @@ h2.burn_faster-title {
           @media #{$mobile} {
             margin-right: 10px;
           }
-          a,img {
+          a,
+          img {
             margin: auto;
           }
         }

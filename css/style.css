@@ -1938,6 +1938,10 @@ h2.burn_faster-title span {
   text-align: center;
 }
 
+.main_text .fat .imgs .fat-img img {
+  max-width: 180px;
+}
+
 @media (max-width: 767px) {
   .main_text .fat .imgs .fat-img {
     padding: 15px 25px;
@@ -2155,6 +2159,7 @@ h2.burn_faster-title span {
   position: relative;
   top: -40px;
   margin-right: 35px;
+  max-width: 275px;
 }
 
 @media (max-width: 767px) {
@@ -2265,6 +2270,7 @@ h2.burn_faster-title span {
   position: absolute;
   bottom: 0;
   right: 15px;
+  max-width: 440px;
 }
 
 @media (max-width: 550px) {
@@ -2324,6 +2330,14 @@ h2.burn_faster-title span {
   }
 }
 
+@media (min-width: 768px) and (max-width: 915px) {
+  .checkout_header .secure-checkout .desc > img {
+    top: 10px;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
 .checkout_header .secure-checkout h4 {
   font-weight: 500;
   font-size: 21px;
@@ -2341,6 +2355,12 @@ h2.burn_faster-title span {
   font-size: 18px;
   line-height: 23px;
   color: #179bd7;
+}
+
+@media (min-width: 768px) and (max-width: 915px) {
+  .checkout_header .secure-checkout h4 span {
+    display: block;
+  }
 }
 
 @media (max-width: 767px) {
@@ -2564,7 +2584,6 @@ h2.burn_faster-title span {
     height: 40px;
     line-height: 40px;
     border-radius: 6px;
-    margin-bottom: 8px;
   }
 }
 
@@ -2706,6 +2725,7 @@ h2.burn_faster-title span {
 @media (max-width: 915px) {
   .order .order-content .secure_order .form-group .field_container {
     width: 100%;
+    margin-bottom: 8px;
   }
 }
 
@@ -3461,6 +3481,10 @@ h2.burn_faster-title span {
   position: relative;
 }
 
+.customers_testimonials .customer_testimonial .author_img img {
+  max-width: 88px;
+}
+
 @media (max-width: 767px) {
   .customers_testimonials .customer_testimonial .author_img {
     margin-right: 0;
@@ -3984,6 +4008,7 @@ h2.burn_faster-title span {
   top: -30px;
   -webkit-filter: drop-shadow(0px 3px 16px rgba(35, 32, 31, 0.3));
           filter: drop-shadow(0px 3px 16px rgba(35, 32, 31, 0.3));
+  max-width: 76px;
 }
 
 @media (min-width: 768px) and (max-width: 915px) {
@@ -4042,6 +4067,99 @@ h2.burn_faster-title span {
 
 .surprise .book a img {
   margin-right: 5px;
+}
+
+.purchase-gift {
+  padding: 0 95px 60px;
+}
+
+@media (min-width: 768px) and (max-width: 915px) {
+  .purchase-gift {
+    padding: 0 35px 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .purchase-gift {
+    padding: 0 15px 24px;
+  }
+}
+
+.purchase-gift-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.purchase-gift .title {
+  font-size: 32px;
+  line-height: 42px;
+  color: #23201f;
+}
+
+.purchase-gift .title span {
+  background: #02643e;
+  text-transform: uppercase;
+  color: #fff;
+  display: inline-block;
+  padding: 4px 10px 0;
+}
+
+.purchase-gift .desc {
+  font-size: 18px;
+  line-height: 30px;
+  color: #23201f;
+  margin: 14px 0 20px;
+}
+
+.purchase-gift ul li {
+  font-size: 14px;
+  line-height: 19px;
+  color: #5d514d;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.purchase-gift ul li:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.purchase-gift ul li img {
+  margin-right: 8px;
+}
+
+.purchase-gift .text {
+  width: 57%;
+}
+
+.purchase-gift .image {
+  width: 40%;
+  text-align: right;
+}
+
+.purchase-gift .confirm-purchase {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.purchase-gift .confirm-purchase a {
+  font-family: "Open Sans";
+  font-size: 24px;
+  line-height: 33px;
+  text-align: center;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  color: #179BD7;
 }
 
 .contact_us {
@@ -4348,7 +4466,8 @@ h2.burn_faster-title span {
   }
 }
 
-.page_content .content .contact_way .email .icon a, .page_content .content .contact_way .email .icon img,
+.page_content .content .contact_way .email .icon a,
+.page_content .content .contact_way .email .icon img,
 .page_content .content .contact_way .address .icon a,
 .page_content .content .contact_way .address .icon img {
   margin: auto;
