@@ -2787,12 +2787,12 @@ h2.burn_faster-title {
 }
 
 .surprise {
-  padding: 60px 95px;
+  padding: 60px 95px 20px;
   @media #{$tablet} {
-    padding: 40px 35px;
+    padding: 40px 35px 20px;
   }
   @media #{$mobile} {
-    padding: 24px 15px;
+    padding: 24px 15px 0;
   }
   h2 {
     font-weight: 500;
@@ -2924,7 +2924,7 @@ h2.burn_faster-title {
 }
 
 .purchase-gift {
-  padding: 0 95px 60px;
+  padding: 0 95px 50px;
 
   @media #{$tablet} {
     padding: 0 35px 40px;
@@ -2933,14 +2933,30 @@ h2.burn_faster-title {
     padding: 0 15px 24px;
   }
   &-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    background: #E6F0EC;
+    border-radius: 17px;
+    padding: 40px 0 40px 40px;
+    @media #{$mobile} {
+      padding: 30px 15px;
+    }
+    .gift-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      @media #{$mobile} {
+        flex-direction: column;
+        align-items: stretch;
+      }
+    }
   }
   .title {
     font-size: 32px;
     line-height: 42px;
     color: #23201f;
+    @media #{$mobile} {
+      font-size: 26px;
+      line-height: 34px;
+    }
     span {
       background: #02643e;
       text-transform: uppercase;
@@ -2954,6 +2970,9 @@ h2.burn_faster-title {
     line-height: 30px;
     color: #23201f;
     margin: 14px 0 20px;
+    @media #{$mobile} {
+      font-size: 16px;
+    }
   }
   ul {
     li {
@@ -2962,6 +2981,10 @@ h2.burn_faster-title {
       color: #5d514d;
       display: flex;
       align-items: center;
+      padding-right: 40px;
+      @media #{$mobile} {
+        padding-right: 0;
+      }
       &:not(:last-child) {
         margin-bottom: 16px;
       }
@@ -2971,22 +2994,49 @@ h2.burn_faster-title {
     }
   }
   .text {
-    width: 57%;
+    width: 60%;
+    @media #{$mobile} {
+      order: 2;
+      width: 100%;
+    }
   }
   .image {
-    width: 40%;
-    text-align: right;
+    width: 38%;
+    @media #{$mobile} {
+      order: 1;
+      width: 100%;
+      text-align: center;
+      margin-bottom: 24px;
+    }
+    img {
+      filter: drop-shadow(0px 9px 18px rgba(0, 0, 0, 0.18));
+      max-width: 231px;
+      @media #{$mobile} {
+        max-width: 140px;
+      }
+    }
   }
   .confirm-purchase {
     text-align: center;
     margin-top: 40px;
+    padding-right: 40px;
+    @media #{$mobile} {
+      margin-top: 30px;
+      padding-right: 0;
+    }
     a {
       font-family: "Open Sans";
-      font-size: 24px;
-      line-height: 33px;
+      font-size: 20px;
+      line-height: 27px;
       text-align: center;
       text-decoration-line: underline;
       color: #179BD7;
+      span {
+        display: inline;
+        @media (min-width:768px) {
+          display: block;
+        }
+      }
     }
   }
 }
