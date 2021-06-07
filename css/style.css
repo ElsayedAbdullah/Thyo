@@ -56,6 +56,13 @@ p {
   margin: 0;
 }
 
+img {
+  image-rendering: -webkit-optimize-contrast;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  will-change: transform;
+}
+
 ul {
   list-style: none;
 }
@@ -1304,6 +1311,42 @@ footer .copyright p {
   z-index: 2;
 }
 
+.main-video .main-heading {
+  font-size: 41px;
+  line-height: 54px;
+  text-align: center;
+  color: #23201F;
+  max-width: 825px;
+  margin: 32px auto 45px;
+}
+
+@media (min-width: 768px) and (max-width: 915px) {
+  .main-video .main-heading {
+    font-size: 35px;
+    line-height: 44px;
+    margin: 20px auto 30px;
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .main-video .main-heading {
+    font-size: 24px;
+    line-height: 34px;
+    margin: 20px auto 30px;
+  }
+}
+
+.main-video .main-heading mark {
+  padding: 5px;
+  background: #02643E;
+  color: #fff;
+}
+
+.main-video .main-heading span {
+  color: #02643E;
+}
+
 .main-video .video-info {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1314,7 +1357,7 @@ footer .copyright p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 33px 10px 15px;
+  margin: 20px 10px 10px;
 }
 
 .main-video .video-info img {
@@ -1381,6 +1424,12 @@ footer .copyright p {
   max-width: 400px;
 }
 
+@media (min-width: 768px) and (max-width: 915px) {
+  .main-video .bg-video .volume-mute {
+    padding: 30px;
+  }
+}
+
 @media (max-width: 767px) {
   .main-video .bg-video .volume-mute {
     padding: 13px;
@@ -1406,6 +1455,12 @@ footer .copyright p {
   font-size: 32px;
   line-height: 32px;
   color: #f5f4f4;
+}
+
+@media (min-width: 768px) and (max-width: 915px) {
+  .main-video .bg-video .volume-mute p {
+    font-size: 27px;
+  }
 }
 
 .main-video .bg-video .volume-mute p:last-of-type {
@@ -1513,6 +1568,8 @@ footer .copyright p {
 @media (max-width: 767px) {
   .limited_offer .pricing-plans .plan {
     width: 100%;
+    max-width: 400px;
+    margin: 0 auto 20px;
   }
 }
 
@@ -1554,6 +1611,12 @@ footer .copyright p {
 
 .limited_offer .pricing-plans .plan.plan-6-bottles .free-bonus {
   margin-top: 30px;
+}
+
+@media (max-width: 767px) {
+  .limited_offer .pricing-plans .plan.plan-6-bottles .free-bonus {
+    margin-top: 10px;
+  }
 }
 
 @media (max-width: 767px) {
