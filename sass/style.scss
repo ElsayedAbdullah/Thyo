@@ -2894,6 +2894,12 @@ h2.burn_faster-title {
       z-index: 0;
       position: absolute;
     }
+    &.additional_bonus {
+      margin-bottom: 0;
+      @media #{$mobile} {
+        margin-bottom: 16px;
+      }
+    }
   }
   .books {
     display: flex;
@@ -2968,7 +2974,7 @@ h2.burn_faster-title {
 }
 
 .purchase-gift {
-  padding: 0 95px 30px;
+  padding: 0 95px 20px;
 
   @media #{$tablet} {
     padding: 0 35px 20px;

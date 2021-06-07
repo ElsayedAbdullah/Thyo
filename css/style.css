@@ -4023,6 +4023,16 @@ h2.burn_faster-title span {
   position: absolute;
 }
 
+.surprise .free_books.additional_bonus {
+  margin-bottom: 0;
+}
+
+@media (max-width: 767px) {
+  .surprise .free_books.additional_bonus {
+    margin-bottom: 16px;
+  }
+}
+
 .surprise .books {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4133,7 +4143,7 @@ h2.burn_faster-title span {
 }
 
 .purchase-gift {
-  padding: 0 95px 30px;
+  padding: 0 95px 20px;
 }
 
 @media (min-width: 768px) and (max-width: 915px) {
